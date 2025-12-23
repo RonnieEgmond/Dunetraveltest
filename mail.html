@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Verzenden - Dunetravel</title>
+    <style>
+        body { font-family: sans-serif; background-color: #1a1a1a; color: white; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: #2a2a2a; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5); }
+        h2 { color: #ffeb3b; text-align: center; }
+        label { display: block; margin-top: 15px; color: #ccc; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #444; background: #333; color: white; box-sizing: border-box; }
+        input[type="file"] { background: none; border: none; padding: 5px 0; }
+        .send-btn { background-color: #ffeb3b; color: #1a1a1a; border: none; padding: 12px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+        .send-btn:hover { background-color: #e5d334; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Nieuw Bericht</h2>
+  <form action="/api/send_mail" method="POST" enctype="multipart/form-data">
+        
+        <label for="from">Jouw E-mailadres (Afzender):</label>
+        <input type="email" id="from" name="from" required placeholder="je-email@voorbeeld.com">
+
+        <label for="to">Geadresseerde:</label>
+        <input type="email" id="to" name="to" required placeholder="ontvanger@voorbeeld.com">
+
+        <label for="subject">Onderwerp:</label>
+        <input type="text" id="subject" name="subject" required placeholder="Waar gaat het over?">
+
+        <label for="message">Bericht:</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Typ hier je tekst..."></textarea>
+
+        <label for="file">Bijlage toevoegen:</label>
+        <input type="file" id="file" name="attachment">
+
+        <button type="submit" class="send-btn">E-mail Verzenden</button>
+    </form>
+</div>
+
+</body>
+</html>
