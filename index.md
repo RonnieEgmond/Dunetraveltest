@@ -5,9 +5,10 @@ title: Home
 
 <style>
   body {
-    background-image: url('{{ "/assets/achtergrond.jpg" | relative_url }}');
+    background-image: url('/assets/achtergrond.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-color: #333; /* Dan zie je in ieder geval grijs als de foto mist */
   }
 </style>
 
