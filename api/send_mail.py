@@ -25,7 +25,7 @@ class handler(BaseHTTPRequestHandler):
         # 2. Jouw SMTP gegevens (Mailtrap / Mailsandbox)
         smtp_server = "smtp.mailsandbox.com"
         smtp_port = 2525
-        smtp_user = "ronaldus.egmond@gmail"
+        smtp_user = "ronaldus.egmond@gmail.com"
         smtp_pass = "lamoraal2025"
 
         # 3. De e-mail samenstellen
