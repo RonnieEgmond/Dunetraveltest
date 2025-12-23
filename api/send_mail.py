@@ -25,10 +25,11 @@ class handler(BaseHTTPRequestHandler):
             smtp_port   = 2525
             smtp_user   = "ronaldus.egmond@gmail.com" # Jouw username
             smtp_pass   = "lamoraal2025"   # Jouw password
+            mail_from_address = "hello@example.com"
 
             # 4. Mail opstellen
             msg = MIMEMultipart()
-            msg['From'] = "hello@example.com"
+            msg['From'] = mail_from_address
             msg['To'] = recipient
             msg['Subject'] = f"{subject} (van: {user_email})"
             msg.attach(MIMEText(message, 'plain'))
