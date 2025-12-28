@@ -12,42 +12,44 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #111;
-  /* Verwijder hier de background-image, die gaat naar de ::before laag */
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  position: relative; /* Cruciaal voor de positionering van de achtergrond */
-}
+    margin: 0;
+    padding: 50px;
+    font-family: sans-serif;
+    /* Verander color naar black zodat letters zichtbaar zijn */
+    color: black; 
+    min-height: 100vh;
+    position: relative;
+  }
 
-body::before {
-  content: "";
-  position: fixed; /* Houdt de achtergrond op zijn plek bij scrollen */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Plaatst de afbeelding achter de tekst */
-  
-  background-image: url('/assets/img/Ronald.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  
-  /* De vervaging */
-  filter: blur(1px); 
-  
-  /* Optioneel: Maakt de randen strakker door de afbeelding iets te vergroten */
-  transform: scale(1.1); 
-}
-/**
+  .background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    
+    background-image: url('/assets/achtergrond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* VERVANG blur DOOR brightness */
+    /* 1.0 is normaal, alles daarboven (bijv 1.8) maakt het lichter */
+    filter: brightness(2.8); 
+    
+    /* Scale is niet meer nodig als je niet blurred */
+    transform: scale(1); 
+  }
+
+  .content-box {
+    /* Maak de box licht/transparant of verwijder de achtergrond */
+    background: rgba(255, 255, 255, 0.4); 
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; 
+    margin-bottom: 20px;
+  }/**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,

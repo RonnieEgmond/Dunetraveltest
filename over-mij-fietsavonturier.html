@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dunetravel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            color: #ffeb3b;
+            border-bottom: 2px solid #ffeb3b;
+            padding-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover { text-decoration: underline; }
+        
+        code {
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #444;
+        }
+        .ruby-code { color: #82aaff; }
+        a { color: #ffeb3b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Terug naar Home</a>
+        
+        <h1>Welcome to Dunetravel powered by Jekyll</h1>
+        <p><em>Gepubliceerd op: 24 november 2025</em></p>
+        
+        <p>Je vindt deze post in je <code>_posts</code> map. Je kunt deze bewerken en de site opnieuw bouwen om de wijzigingen te zien.</p>
+
+        <p>Jekyll vereist dat blogpost-bestanden de volgende indeling hebben:</p>
+        <code>JAAR-MAAND-DAG-titel.MARKUP</code>
+
+        <p>Jekyll biedt ook krachtige ondersteuning voor codefragmenten:</p>
+        <pre><code><span class="ruby-code">def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')</span></code></pre>
+
+        <p>Bekijk de <a href="https://jekyllrb.com/docs/home" target="_blank">Jekyll documentatie</a> voor meer info. Je kunt ook terecht op het <a href="https://talk.jekyllrb.com/" target="_blank">Jekyll Talk forum</a> voor vragen.</p>
+    </div>
+</body>
+</html>
