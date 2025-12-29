@@ -1,53 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    margin: 0;
-    padding: 50px;
-    font-family: sans-serif;
-    /* VERANDERD: Kleur naar zwart gezet voor leesbaarheid op lichte achtergrond */
-    color: #000; 
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  .background-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
-    
-    background-image: url('/assets/achtergrond.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    /* VERANDERD: Blur verwijderd en brightness toegevoegd */
-    /* 1.0 is normaal, alles boven de 1 (bijv. 1.7) maakt de foto lichter */
-    filter: brightness(1.7); 
-    
-    /* VERANDERD: Scale is niet meer nodig zonder blur */
-    transform: scale(1); 
-  }
-
-  .content-box {
-    /* OPTIONEEL: Achtergrond van de box lichter maken in plaats van donker */
-    background: rgba(255, 255, 255, 0.8); 
-    padding: 20px;
-    border-radius: 10px;
-    position: relative; 
-    margin-bottom: 20px;
-  }
-
-  /* Zorg dat links ook goed zichtbaar blijven */
-  a {
-    color: #0044cc;
-  }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mijn Fietsavontuur</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="background-blur"></div>
